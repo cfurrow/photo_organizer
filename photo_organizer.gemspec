@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
     "lib/photo_organizer/file_details.rb",
     "lib/photo_organizer/file_mover.rb"
   ]
-  s.homepage    = 'https://cfurrow.github.io/photo_organizer'
+  s.homepage    = 'http://github.com/cfurrow/photo_organizer'
   s.license     = "MIT"
 
   s.executables = ['photo_organizer']
