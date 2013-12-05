@@ -1,7 +1,8 @@
 class PhotoOrganizer
   def self.process(src, dest)
+    raise "Directory does not exist: \"#{src}\"" unless Dir.exists?(src)
+    
     src_dir = Dir.new(File.expand_path(src))
-    raise "Directory does not exist. #{src}" unless Dir.exists?(src)
     puts "Processing directory #{src}"
     src_dir.each do |file_path|
       full_path = File.expand_path("#{src}/#{file_path}")

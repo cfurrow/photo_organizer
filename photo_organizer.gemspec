@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'photo_organizer'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.summary     = "Photo organizer"
   s.description = "Given a src, and dest folder, group photos/videos by exif date, or ctime(). e.g. dest_folder/2013/12/04/2013-12-04 08.23.03.jpg"
   s.authors     = ["Carl Furrow"]
