@@ -1,4 +1,4 @@
-class DropboxPhotoOrganizer
+class PhotoOrganizer
   def self.process(src, dest)
     src_dir = Dir.new(File.expand_path(src))
     raise "Directory does not exist. #{src}" unless Dir.exists?(src)
@@ -13,5 +13,5 @@ class DropboxPhotoOrganizer
   end
 end
 
-require 'dropbox_photo_organizer/file_details'
-require 'dropbox_photo_organizer/file_mover'
+require 'photo_organizer/file_details'
+require 'photo_organizer/file_mover'

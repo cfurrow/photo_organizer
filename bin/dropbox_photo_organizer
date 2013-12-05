@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'dropbox_photo_organizer'
-
-DropboxPhotoOrganizer.process(ARGV[0], ARGV[1])
