@@ -56,3 +56,14 @@ Processing Photo Dec 04, 2 32 21 PM.jpg to 2013-12-04 14.32.21.jpg...
 </plist>
 
 ```
+
+### Configuration
+
+You can configure things by creating a '.photo_organizer' file and placing it in your home directory (~).
+
+
+This configuration will set the folder format to be year/month versus the default of year/month/day.
+
+```
+format: "%{year}/%{month}"
+```
