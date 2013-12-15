@@ -11,7 +11,7 @@ class FileMover
     # make dir based on year/month/day (0 padded)
     file_date = file_detail.datetime
 
-    folder = File.join(File.expand_path("#{dest_folder}"), file_date.strftime(configuration.format)
+    folder = File.join(File.expand_path("#{dest_folder}"), file_date.strftime(configuration.format))
     FileUtils.mkdir_p(folder)
 
     FileUtils.mv(file_detail.full_path, "#{folder}/#{file_detail.new_filename}")
