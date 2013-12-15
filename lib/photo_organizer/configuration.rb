@@ -5,7 +5,7 @@ class Configuration
 
   def initialize(path='~/.photo_organizer')
     @path        = File.expand_path(path)
-    @format      = "%{year}/%{month}/%{day}/"
+    @format      = "%Y/%m/%d"
 
     if File.exists?(@path)
       read_config

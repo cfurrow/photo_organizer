@@ -31,7 +31,7 @@ Processing Photo Dec 04, 2 32 21 PM.jpg to 2013-12-04 14.32.21.jpg...
   
   <key>ProgramArguments</key>
   <array>
-  	<string>/Users/carl/.rbenv/versions/1.9.3-p392/bin/photo_organizer</string>
+  	<string>/Users/carl/.rbenv/shims/photo_organizer</string>
     <string>/Users/carl/Dropbox/Camera Uploads</string>
     <string>/Users/carl/Dropbox/Photos</string>
   </array>
@@ -65,5 +65,7 @@ You can configure things by creating a '.photo_organizer' file and placing it in
 This configuration will set the folder format to be year/month versus the default of year/month/day.
 
 ```
-format: "%{year}/%{month}"
+format: "%Y/%m"
 ```
+
+See [strftime](http://apidock.com/ruby/DateTime/strftime) for details on other time elements you can include.

@@ -22,7 +22,7 @@ class FileDetails
   end
 
   def datetime
-    @date_time || DateTime.parse('1970-01-01 00.00.00')
+    @date_time || DateTime.parse('1970-01-01 00.00.00p')
   end
 
   def is_photo?
