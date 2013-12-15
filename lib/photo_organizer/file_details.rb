@@ -18,19 +18,19 @@ class FileDetails
     else
       @date_time = @file.ctime()
     end
-    @date_time.strftime("%Y-%m-%d %H.%M.%S")
+    @date_time.strftime("%Y-%m-%d %H.%M.%S") rescue nil
   end
 
   def datetime
-    @date_time
+    @date_time || DateTime.parse('1970-01-01 00.00.00')
   end
 
   def is_photo?
-    !!(/(jpe?g|gif|png|bmp|tiff)$/ =~ @extension)
+    !!(/(jpe?g|gif|png|bmp|tiff)$/i =~ @extension)
   end
 
   def is_movie?
-    !!(/(mov|mp4|avi)$/ =~ @extension)
+    !!(/(mov|mp4|avi)$/i =~ @extension)
   end
 
   def is_jpg?

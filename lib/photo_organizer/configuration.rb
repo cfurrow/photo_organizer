@@ -21,6 +21,5 @@ class Configuration
   def parse_format(contents)
     return unless contents
     @format = contents['format'] if contents['format']
-    puts "#{format}"
   end
 end

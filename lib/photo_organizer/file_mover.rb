@@ -19,6 +19,6 @@ class FileMover
     FileUtils.mkdir_p(folder)
 
     FileUtils.mv(file_detail.full_path, "#{folder}/#{file_detail.new_filename}")
-    puts "\tMoved to #{folder}/#{file_detail.new_filename}"
+    Logger.log("\tMoved to #{folder}/#{file_detail.new_filename}")
   end
 end
