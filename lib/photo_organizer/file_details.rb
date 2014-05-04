@@ -1,6 +1,6 @@
 require 'exifr'
 
-class FileDetails  
+class FileDetails
   def initialize(file_path)
     raise "File not found. #{file_path}" unless File.exists?(file_path)
     @file_path = file_path
@@ -13,12 +13,12 @@ class FileDetails
   end
 
   def datetime_string
-    if has_exif?
+    if has_exif? && @exif.date_time
       @date_time = @exif.date_time
     else
-      @date_time = @file.ctime()
+      @date_time = @file.ctime() || @file.mtime()
     end
-    @date_time.strftime("%Y-%m-%d %H.%M.%S") rescue nil
+    @date_time.strftime("%Y-%m-%d %H.%M.%S") rescue "invalid-date"
   end
 
   def datetime
@@ -56,7 +56,7 @@ class FileDetails
   def full_path
     @file_path
   end
-  
+
   def extension
     @extension
   end
