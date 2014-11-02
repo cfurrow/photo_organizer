@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require './lib/photo_organizer/version'
+
+puts "Building gem..."
+`gem build photo_organizer.gemspec`
+puts "Installing gem photo_organizer-#{PhotoOrganizer::VERSION}.gem"
+`gem install photo_organizer-#{PhotoOrganizer::VERSION}.gem`
+puts "You may need to run \"rbenv rehash\" to get the executable to work"
